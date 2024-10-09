@@ -1,4 +1,5 @@
 # 1. git push 出现错误
+'''
 python_test git:(main) git push -u origin main
 To https://github.com/meilingoo/python_test.git
  ! [rejected]        main -> main (non-fast-forward)
@@ -7,6 +8,7 @@ hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+'''
 
 - 解决方法：
 - 这个错误信息表示你当前的本地分支落后于远程分支，导致推送被拒绝。你可以按照以下步骤解决这个问题：
