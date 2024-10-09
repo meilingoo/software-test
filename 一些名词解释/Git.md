@@ -83,16 +83,17 @@ fatal: Not possible to fast-forward, aborting.
 
 # 3. git push 出现错误
  ```bash
- meilingoo.github.io git:(main) ✗ git push -u origin main
+   meilingoo.github.io git:(main) git push -u origin main
 Enumerating objects: 13, done.
 Counting objects: 100% (13/13), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (9/9), done.
-Writing objects: 100% (12/12), 2.08 MiB | 304.25 MiB/s, done.
+error: RPC failed; HTTP 400 curl 22 The requested URL returned error: 400
+send-pack: unexpected disconnect while reading sideband packet
+Writing objects: 100% (12/12), 2.08 MiB | 1.98 MiB/s, done.
 Total 12 (delta 0), reused 12 (delta 0), pack-reused 0
-To https://github.com/meilingoo/meilingoo.github.io.git
-   bc0a5d0..336e041  main -> main
-branch 'main' set up to track 'origin/main'.
+fatal: the remote end hung up unexpectedly
+Everything up-to-date
    ```
 
 你遇到的错误是 `RPC failed; HTTP 400 curl 22 The requested URL returned error: 400`，这通常表明 Git 客户端在与 GitHub 服务器通信时出现了问题。根据错误提示，Git 在推送时被服务器意外中断。
